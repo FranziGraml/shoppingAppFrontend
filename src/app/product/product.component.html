@@ -1,15 +1,21 @@
-<div>
-  <div>
+<div class="product-card">
   <p>Product Name: {{product.name}}</p>
   <p>Product Description: {{product.description}}</p>
   <p>Product Price: {{product.price}}€</p>
-  </div>
-  <input type="text" name="name" [(ngModel)]="quantity" class="input"/>
-  <button (click) ="updateCart()">Add to Cart</button>
+</div>
+<!--<input type="text" name="name" [(ngModel)]="quantity" class="input"/>-->
+<div class="container">
+<select id="quantity" class="select">
+  <option value="Item 1">1</option>
+  <option value="Item 2">2</option>
+  <option value="Item 3">3</option>
+  <option value="Item 3">4</option>
+  <option value="Item 3">5</option>
+  <option value="Item 3">6</option>
+</select>
+<button (click)="updateCart()">Add to Cart</button>
 </div>
 
-/*<mat-form-field>
-  <mat-label>Input</mat-label>
-  <input matInput>
-</mat-form-field>
-*/
+
+
+

@@ -3,6 +3,7 @@ import {CartService} from "../cart.sevice";
 import {product} from "../../models/products";
 
 
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -11,7 +12,7 @@ import {product} from "../../models/products";
 export class ProductComponent implements OnInit {
 
   @Input() product!: product
-  quantity: number = 1;
+  @Input() quantity: number = 1;
 
   constructor(private cartService: CartService) {
   }
@@ -20,7 +21,7 @@ export class ProductComponent implements OnInit {
   }
 
   updateCart() {
-    this.cartService.updateCart(this.product, this.quantity)
+    this.cartService.updateCart(this.product, this.quantity).subscribe();
   }
 
   /*decreaseQuantity() {

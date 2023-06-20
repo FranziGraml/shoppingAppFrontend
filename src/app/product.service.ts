@@ -11,8 +11,8 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getHeaders() {
-    let username = 'user';
-    let password = 'password';
+    let username = 'f.muster.de';
+    let password = '1111';
     let auth = btoa(`${username}:${password}`);
 
     return new HttpHeaders({
@@ -25,7 +25,7 @@ export class ProductService {
   getProducts(): Observable<product[]> {
     return this.http.get <product[]>("http://localhost:8080/product", {headers: this.getHeaders()});
   }
-  //addProduct(product: product): Observable<product> {
-    //return this.http.post <product>("http://localhost:8080/product", product, {headers: this.getHeaders()});
-  //}
+  addProduct(product: product): Observable<product> {
+    return this.http.post <product>("http://localhost:8080/product", product, {headers: this.getHeaders()});
+  }
 }

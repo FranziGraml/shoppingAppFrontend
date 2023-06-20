@@ -1,6 +1,7 @@
+import {user} from "./user";
 export interface order {
   id: number;
-  user: string;
+  user: user;
   paid: boolean;
   shippingState: string;
   date: string;

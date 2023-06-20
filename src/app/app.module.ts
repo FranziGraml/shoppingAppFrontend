@@ -11,6 +11,9 @@ import {AppRoutingModule} from "./app-routing.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
+
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
 
 
 
+
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatToolbarModule,
     FormsModule,
     HttpClientModule,
+    MatInputModule,
+    MatSelectModule,
 
   ],
   providers: [],
