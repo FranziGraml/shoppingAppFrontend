@@ -2,20 +2,25 @@
   <p>Product Name: {{product.name}}</p>
   <p>Product Description: {{product.description}}</p>
   <p>Product Price: {{product.price}}€</p>
+  <p >amount: {{quantity * product.price}}</p>
 </div>
-<!--<input type="text" name="name" [(ngModel)]="quantity" class="input"/>-->
+<input type="text" name="name" [(ngModel)]="quantity" class="input"/>
+<button (click)="increaseQuantity()">+</button>
+<button (click)="decreaseQuantity()">-</button>
+<button *ngIf="!hide" (click)="updateCart()">Add to Cart</button>
+
+
+
+
+
+<!--
 <div class="container">
-<select id="quantity" class="select">
-  <option value="Item 1">1</option>
-  <option value="Item 2">2</option>
-  <option value="Item 3">3</option>
-  <option value="Item 3">4</option>
-  <option value="Item 3">5</option>
-  <option value="Item 3">6</option>
-</select>
-<button (click)="updateCart()">Add to Cart</button>
-</div>
-
-
-
-
+  <select id="quantity" class="select">
+    <option value="Item 1">1</option>
+    <option value="Item 2">2</option>
+    <option value="Item 3">3</option>
+    <option value="Item 3">4</option>
+    <option value="Item 3">5</option>
+    <option value="Item 3">6</option>
+  </select>
+</div>-->

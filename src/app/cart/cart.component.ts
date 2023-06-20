@@ -3,6 +3,7 @@ import {ProductService} from "../product.service";
 import {productQuantity} from "../../models/product-quantity";
 import {CartService} from "../cart.sevice";
 import {cart} from "../../models/cart";
+import {product} from "../../models/products";
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +14,10 @@ export class CartComponent implements OnInit {
 
 
   constructor(private cartService: CartService) { }
-  @Input()
+
+
+  products: product[] = [];
+
   cart?: cart
 
   ngOnInit() {
@@ -21,5 +25,6 @@ export class CartComponent implements OnInit {
       this.cart = response});
 
   }
+
 
 }
