@@ -30,7 +30,8 @@ export class CartService {
     console.log("XXX")
     let productQuantity = {
       product: product,
-      quantity: quantity
+      quantity: quantity,
+
     }
 
     return this.http.put<cart> ("http://localhost:8080/cart", productQuantity, {headers: this.getHeaders()});
@@ -38,6 +39,7 @@ export class CartService {
   getCarts(): Observable<cart> {
       return this.http.get <cart>("http://localhost:8080/cart", {headers: this.getHeaders()});
      }
+
 
 
 }

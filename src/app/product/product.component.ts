@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
   @Input() product!: product
   @Input() quantity: number = 0;
   @Input() hide: boolean = false;
+ // @Input() amount: number = 0;
 
   constructor(private cartService: CartService) {
   }
@@ -22,17 +23,20 @@ export class ProductComponent implements OnInit {
   }
 
   updateCart() {
+    // @ts-ignore
     this.cartService.updateCart(this.product, this.quantity).subscribe();
   }
 
   decreaseQuantity() {
-    if (this.quantity > 0 ) {
-      this.quantity --;
+    if (this.quantity > 0) {
+      this.quantity--;
+
     }
   }
 
   increaseQuantity() {
-    this.quantity ++;
+    this.quantity++;
+
   }
 
 }

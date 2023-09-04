@@ -1,4 +1,11 @@
 <div class="back-link">
   <a routerLink="/" routerLinkActive="active">Back to Home</a>
 </div>
-<app-product [hide]=" true" [product]= item.product [quantity]= item.quantity *ngFor="let item of cart?.items"></app-product>
+<button (click)="closeOrder()">Close Order</button>
+<div *ngIf="cart">
+  <app-product [hide]=" true" [product]=item.product [quantity]=item.quantity
+               *ngFor="let item of cart?.items"></app-product>
+</div>
+<div *ngIf="cart">
+  <p>Total: {{calculateSum()}}</p>
+</div>

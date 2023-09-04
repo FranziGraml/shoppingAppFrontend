@@ -11,8 +11,8 @@ export class OrderService {
   constructor(private http: HttpClient) { }
 
   getHeaders() {
-    let username = 'admin';
-    let password = 'adminPassword';
+    let username = 'f.muster.de';
+    let password = '1111';
     let auth = btoa(`${username}:${password}`);
 
     return new HttpHeaders({
@@ -24,8 +24,8 @@ export class OrderService {
   getOrders(): Observable<order[]> {
     return this.http.get <order[]>("http://localhost:8080/order", {headers: this.getHeaders()});
   }
-  addOrder(order: order): Observable<order> {
-    return this.http.post <order>("http://localhost:8080/order", order, {headers: this.getHeaders()});
+  addOrder(): Observable<order> {
+    return this.http.post <order>("http://localhost:8080/order", {}, {headers: this.getHeaders()});
   }
 
 }

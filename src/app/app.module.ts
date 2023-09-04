@@ -13,6 +13,8 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
+import { OrderHistoryComponent } from './order-history/order-history.component';
+
 
 
 
@@ -24,6 +26,8 @@ import {MatSelectModule} from "@angular/material/select";
     ProductComponent,
     ProductListComponent,
     ProfileComponent,
+    OrderHistoryComponent,
+
 
 
 
