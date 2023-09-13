@@ -3,11 +3,13 @@
   <p>Product Description: {{product.description}}</p>
   <p>Product Price: {{product.price}}€</p>
   <p >amount: {{quantity * product.price}}</p>
+<input class="input" type="text" name="name" [(ngModel)]="quantity" class="input"/>
+<button class="minusButton" (click)="increaseQuantity()">+</button>
+<button class="plusButton" (click)="decreaseQuantity()">-</button>
+<button class="addButton"*ngIf="!hide" (click)="updateCart()">Cart</button>
 </div>
-<input type="text" name="name" [(ngModel)]="quantity" class="input"/>
-<button (click)="increaseQuantity()">+</button>
-<button (click)="decreaseQuantity()">-</button>
-<button *ngIf="!hide" (click)="updateCart()">Add to Cart</button>
+
+
 
 
 
